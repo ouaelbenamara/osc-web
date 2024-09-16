@@ -1,0 +1,12 @@
+{
+  "name": "osc-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack build --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
