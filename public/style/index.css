@@ -34,6 +34,10 @@
     --ttls-fs: 3rem;
     --sbttls-fs: 1.5rem;
     --txt-fs: 1rem;
+
+    --bg-glass: rgba(65, 32, 90, 0.2);
+    --shdw-glass: 0 4px 30px rgba(0, 0, 0, 0.1);
+    --filter-glass: blur(10px);
 }
 
 a{
@@ -43,7 +47,7 @@ a{
     align-items: center;
     justify-content: center;
     gap: 10px;
-    max-width: 250px;
+    max-width: 260px;
 }
 
 input, .main-btn, .secondary-btn{
@@ -51,7 +55,7 @@ input, .main-btn, .secondary-btn{
     border-radius: 50px;
     padding: 5px 40px;
     min-width: 100px;
-    color: var(--fg-wht);
+    width: auto;
 }
 
 .title{
@@ -77,6 +81,7 @@ input, .main-btn, .secondary-btn{
     font-size: var(--txt-fs);
     background-color: var(--fg-orng);
     transition: all ease-in-out .1s;
+    color: var(--fg-wht);
 }
 
 .secondary-btn{
@@ -84,10 +89,16 @@ input, .main-btn, .secondary-btn{
     font-size: var(--txt-fs);
     border: 2px solid var(--fg-orng);
     transition: all ease-in-out .1s;
+    color: var(--fg-orng); 
 }
 
-.main-btn:hover, .secondary-btn:hover{
+.main-btn:hover{
     background-color: var(--fg-prpl);
+}
+
+.secondary-btn:hover{
+    border: 2px solid var(--fg-prpl);
+    color: var(--fg-prpl);
 }
 
 .link{
@@ -152,6 +163,10 @@ nav{
     gap: 30px;
 }
 
+#space{
+    display: none;
+}
+
 main{
     width: 100%;
 }
@@ -163,6 +178,8 @@ main{
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    background: rgb(32,5,52);
+    background: linear-gradient(0deg, rgba(32,5,52,1) 0%, rgba(250,90,6,.25) 50%, rgba(32,5,52,1) 100%);
 }
 
 
@@ -187,7 +204,10 @@ main{
         width: 60%;
         max-width: 400px;
         height: 100vh;
-        background-color: var(--bg-dprpl);
+        background: var(--bg-glass);
+        box-shadow: var(--shdw-glass);
+        backdrop-filter: var(--filter-glass);
+        -webkit-backdrop-filter: var(--filter-glass);
         display: flex;
         flex-direction: column;
         justify-content: baseline;
@@ -202,5 +222,14 @@ main{
 
     #join a{
         display: none;
+    }
+
+    #space{
+        display: inline-block;
+        padding: 0 10px;
+    }
+
+    #hero{
+        flex-direction: column;
     }
 }
