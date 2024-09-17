@@ -182,7 +182,60 @@ main{
     background: linear-gradient(0deg, rgba(32,5,52,1) 0%, rgba(250,90,6,.25) 50%, rgba(32,5,52,1) 100%);
 }
 
+#hero *{
+    text-align: left;
+    float: left;
+}
 
+#hero > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 4.375rem;
+}
+
+#illustration{
+    width: 90%;
+    border-radius: 30px;
+}
+
+#discord-btn{
+    margin-top: 40px;
+}
+
+#banner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-glass);
+    box-shadow: var(--shdw-glass);
+    padding: 10px 15px;
+}
+
+#banner #slogan{
+    letter-spacing: 5px;
+    text-align: center;
+}
+
+#events{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 30px;
+}
+
+#events h2{
+    text-align: center;
+}
+
+#events #cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
 
 @media screen and (min-width: 50px) and (max-width: 767px){
     body{
@@ -198,7 +251,7 @@ main{
     }
 
     nav{
-        position: absolute;
+        position: fixed;
         top: 50px;
         left: -100%;
         width: 60%;
@@ -230,6 +283,27 @@ main{
     }
 
     #hero{
-        flex-direction: column;
+        flex-direction: column-reverse;
+        justify-content: start;
+        gap: 20px;
+        padding: 20px 0;
+    }
+
+    #hero *{
+        text-align: center;
+    }
+
+    #hero .title{
+        line-height: 60px;
+    }
+
+    #hero > div{
+        align-items: center;
+        padding: 0 1.25rem;
+    }
+
+    #events #cards{
+        grid-template-columns: 1fr;
+        gap: 10px;
     }
 }
