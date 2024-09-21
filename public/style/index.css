@@ -62,6 +62,7 @@ input, .main-btn, .secondary-btn{
     font-family: var(--ttls-ff);
     font-size: var(--ttls-fs);
     color: var(--fg-wht);
+    line-height: 65px;
 }
 
 .subtitle{
@@ -122,6 +123,10 @@ input, .main-btn, .secondary-btn{
 
 .wht-clr{
     color: var(--fg-wht);
+}
+
+.gry-clr{
+    color: grey;
 }
 
 .icon{
@@ -466,7 +471,62 @@ main{
     background: #FF0000;
 }
 
+#blog{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 30px;
+    background: var(--bg-glass);
+    box-shadow: var(--shdw-glass);
+    backdrop-filter: var(--filter-glass);
+    -webkit-backdrop-filter: var(--filter-glass);
+    border-radius: 20px;
+}
 
+#blog #posts{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#blog #posts .post{
+    background: var(--bg-glass);
+    box-shadow: var(--shdw-glass);
+    backdrop-filter: var(--filter-glass);
+    -webkit-backdrop-filter: var(--filter-glass);
+    border-radius: 20px;
+}
+
+#blog #posts .post{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#blog #posts .post .cover{
+    max-height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#blog #posts .post .cover, #blog #posts .post .cover img{
+    width: 100%;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+#blog #posts .post .data{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 15px;
+}
 
 @media screen and (min-width: 767px) and (max-width: 991px){
     /* Tablet */
@@ -516,6 +576,10 @@ main{
         width: 620px;
         height: 349.27px;
     }
+
+    #blog #posts{
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 
@@ -542,16 +606,21 @@ main{
         width: 60%;
         max-width: 400px;
         height: 100vh;
-        background: var(--bg-glass);
-        box-shadow: var(--shdw-glass);
-        backdrop-filter: var(--filter-glass);
-        -webkit-backdrop-filter: var(--filter-glass);
+        background: var(--bg-dprpl);
         display: flex;
         flex-direction: column;
         justify-content: baseline;
         align-items: baseline;
         padding: 20px 30px;
         transition: all ease-in-out .1s;
+    }
+
+    nav a{
+        width: 100%;
+    }
+
+    nav .main-btn{
+        min-width: 100%;
     }
 
     #logo img{
@@ -605,5 +674,9 @@ main{
 
     #content #bento{
         grid-template-areas: "instagram" "tiktok" "tiktok" "facebook" "linkedin" "youtube";
+    }
+
+    #blog #posts{
+        grid-template-columns: 1fr;
     }
 }
