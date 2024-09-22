@@ -49,7 +49,6 @@ a{
 input, .main-btn, .secondary-btn{
     border: none;
     border-radius: 50px;
-    padding: 5px 40px;
     min-width: 100px;
     width: auto;
     display: flex;
@@ -58,11 +57,18 @@ input, .main-btn, .secondary-btn{
     justify-content: center;
 }
 
+input{
+    padding: 7px 15px;
+}
+
+.main-btn, .secondary-btn{
+    padding: 5px 40px;
+}
+
 .title{
     font-family: var(--ttls-ff);
     font-size: var(--ttls-fs);
     color: var(--fg-wht);
-    line-height: 65px;
 }
 
 .subtitle{
@@ -499,17 +505,15 @@ main{
     backdrop-filter: var(--filter-glass);
     -webkit-backdrop-filter: var(--filter-glass);
     border-radius: 20px;
-}
-
-#blog #posts .post{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    height: 340px;
 }
 
 #blog #posts .post .cover{
-    max-height: 200px;
+    height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -525,7 +529,61 @@ main{
 #blog #posts .post .data{
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    height: 140px;
     padding: 10px 15px;
+}
+
+#newsletter{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 30px;
+    gap: 20px;
+}
+
+#newsletter h2{
+    text-align: center;
+}
+
+#newsletter #subscribe{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+}
+
+#newsletter #subscribe > div{
+    width: 100%;
+}
+
+#newsletter #subscribe #illustration{
+    text-align: center;
+}
+
+#newsletter #subscribe #illustration img{
+    width: 90%;
+    max-width: 400px;
+}
+
+#newsletter #subscribe #form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+#newsletter #subscribe #form input{
+    margin: 10px 0;
+    min-width: 100%;
+}
+
+
+#newsletter #subscribe #form input[type="submit"]{
+    cursor: pointer;
 }
 
 @media screen and (min-width: 767px) and (max-width: 991px){
@@ -643,10 +701,6 @@ main{
         text-align: center;
     }
 
-    #hero .title{
-        line-height: 60px;
-    }
-
     #hero > div{
         align-items: center;
         padding: 0 1.25rem;
@@ -678,5 +732,9 @@ main{
 
     #blog #posts{
         grid-template-columns: 1fr;
+    }
+
+    #newsletter #subscribe{
+        flex-direction: column;
     }
 }
