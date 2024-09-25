@@ -13,7 +13,7 @@ async function subscribe(email){
     // Check if any documents were returned
     if (!querySnapshot.empty) {
         console.log('Email already subscribed');
-        return 'Email already subscribed'; // Handle as needed
+        return 'You are already subscribed'; // Handle as needed
     }
 
     // If the email doesn't exist, add a new document
@@ -30,7 +30,7 @@ async function subscribe(email){
         return 'Subscription successful';
     } catch (error) {
         console.error('Error subscribing user:', error);
-        return 'Error subscribing user, try again later';
+        return 'Error subscribing, try again later';
     }
     
 }
