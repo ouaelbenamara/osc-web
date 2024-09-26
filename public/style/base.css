@@ -236,6 +236,7 @@ footer #copyright{
 
 @media screen and (min-width: 767px) and (max-width: 991px){
     /* Tablet */
+
     body{
         padding-top: 55px;
     }
