@@ -1,0 +1,95 @@
+main{
+    width: 100%;
+}
+
+main > div:not(#illustration){
+    margin: 50px 0;
+}
+
+#illustration{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(32,5,52);
+    background: linear-gradient(0deg, rgba(32,5,52,1) 0%, rgba(250,90,6,.25) 50%, rgba(32,5,52,1) 100%);
+}
+
+#illustration svg{
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.category{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.category h2{
+    text-align: center;
+}
+
+.category #cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px 100px;
+}
+
+.category #cards .card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    background: var(--bg-glass);
+    box-shadow: var(--shdw-glass);
+    backdrop-filter: var(--filter-glass);
+    -webkit-backdrop-filter: var(--filter-glass);
+    border-radius: 20px;
+    gap: 10px;
+    padding: 15px;
+}
+
+.category #cards .card .snapshot{
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.category #cards .card .snapshot img{
+    width: 100%;
+}
+
+@media screen and (min-width: 767px) and (max-width: 991px){
+    /* Tablet */
+
+    .category{
+        padding: 25px 40px;
+    }
+
+    .category #cards{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 15px 0;
+    }
+}
+
+@media screen and (min-width: 50px) and (max-width: 767px){
+
+    /* Mobile */
+
+    .category{
+        padding: 15px 20px;
+    }
+
+    .category #cards{
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 10px 0;
+    }
+}

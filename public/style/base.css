@@ -116,7 +116,7 @@ input{
 }
 
 .link:hover{
-    color: var(--fg-orng);
+    color: var(--fg-prpl);
 }
 
 .orgn-clr{
@@ -135,7 +135,7 @@ input{
     color: grey;
 }
 
-.icon{
+#hamburger .icon{
     fill: var(--fg-wht);
     cursor: pointer;
 }

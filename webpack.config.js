@@ -12,4 +12,4 @@ module.exports = {
       path: path.resolve(__dirname, 'public/sys')
     },
     mode: 'development'
-  };
+};
