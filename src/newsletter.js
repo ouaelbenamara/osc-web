@@ -42,7 +42,9 @@ form.addEventListener("submit", (e) => {
     e.preventDefault();
     const email = form.querySelector('#email').value;
     subscribe(email).then(res => {
-        alert(res);
+        if(res != "Subscription successful"){
+            alert(res);
+        }
     }).catch(err => {
         alert(err);
     });
