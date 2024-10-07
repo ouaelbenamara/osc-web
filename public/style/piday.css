@@ -1,15 +1,50 @@
-/* General Styles */
+@font-face{
+    font-family: 'Alconica';
+    src: url("../assets/fonts/Aclonica/Aclonica-Regular.ttf");
+}
+
+:root{
+    --1: #050505;
+    --2: #b7b2aad9;
+
+    --txt-ff: 'Alconica', Arial, Helvetica, sans-serif;
+
+    --ttls-fs: 3rem;
+    --sbttls-fs: 1.5rem;
+    --txt-fs: 1rem;
+}
+
 html{
     width: fit-content;
 
 }
+/* body {
+    margin: 0;
+    font-family: var(--txt-ff);
+    background: url('../assets/illustrations/AI101/PidayBG.webp') no-repeat center center fixed;
+    background-size: cover;
+    color: var(--1)
+} */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: url('../assets/illustrations/AI101/Rectangle.svg') no-repeat center center fixed;
-    background-size: cover;
-    color: white;
+    font-family: var(--txt-ff);
+    position: relative;
+    color: var(--1);
 }
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../assets/illustrations/AI101/PidayBG.webp') no-repeat center center fixed;
+    background-size: cover;
+    opacity: 0.3; /* Set the background image opacity */
+    z-index: -1; /* Make sure the background stays behind the content */
+}
+
 
 .container {
     width: 100%;
@@ -23,6 +58,7 @@ body {
     justify-content: flex-end;
     display: flex;
     flex-direction: row;
+    margin-bottom: 100px;
     div{
         flex: 1;
         display: flex;
@@ -31,12 +67,31 @@ body {
         align-items: end;
           .event-des{
          margin-left: 40px;
-        font-size: 32px;
+        font-size: 29px;
         font-weight: 400;
         
     }
 
     }
+}
+
+@media (max-width: 1400px) { /* You can adjust the size (768px) based on when you want the flex to change */
+    .top-section h1 {
+      position: relative;
+      right: 200px;
+      font-size: 70px;
+      margin-bottom: 10px;
+  }
+  
+  }
+@media (max-width: 1333px) { /* You can adjust the size (768px) based on when you want the flex to change */
+  .top-section h1 {
+    position: relative;
+    right: 100px;
+    font-size: 70px;
+    margin-bottom: 10px;
+}
+
 }
 /* Media query for small screens */
 @media (max-width: 1268px) { /* You can adjust the size (768px) based on when you want the flex to change */
@@ -56,6 +111,8 @@ body {
     }
         }
          h1 {
+                position: relative;
+                right: 0px;   
     font-size: 46px;
     margin-bottom: 10px;
 }
@@ -76,13 +133,15 @@ body {
     justify-content: space-around;
     display: flex;
     flex-direction: column;
+    margin-bottom: 70px;
 
     div{
       
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-between;
+        /* justify-content: space-between; */
+
         h2{
                 font-size: 70px;
                 font-weight: 500;
@@ -97,8 +156,11 @@ body {
 
 }
 
+
 h1 {
-    font-size: 96px;
+    position: relative;
+    right: 300px;
+    font-size: 70px;
     margin-bottom: 10px;
 }
 
@@ -116,7 +178,7 @@ p {
 /* Event Schedule Section */
 .schedule-section {
     margin-top: 10px;
-
+    margin-bottom: 100px;
     justify-content: space-around;
     display: flex;
 
@@ -125,7 +187,6 @@ p {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-between;
         h2{
                 font-size: 70px;
                 font-weight: 500;
@@ -156,25 +217,25 @@ p {
     span{
         display: flex;
         width: 120%;
-        
+        font-size: 1.3rem;
 
 div{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     margin-right: 20px;
 
         .point{
-            background-color: #FF00E6;
+            background-color: #00aaffd2;
             border-radius: 100%;
-            width: 10px;
-            height: 10px;
+            width: 25px;
+            height: 25px;
     }
         .stick{
-         border-radius: 30px;
-            background-color: white;
-            width: 4px;
+            border-radius: 30px;
+            background-color: var(--1);
+            width: 5px;
             height: 100px;
     }
     
@@ -184,6 +245,7 @@ div{
     }
   
 }
+
 
 .schedule-icon {
     width: 100px;
@@ -196,9 +258,11 @@ h2{
 .speakers-section {
     margin-top: 50px;
     text-align: center;
+    margin-bottom: 100px;
     h2{
         font-size: 70px;
         font-weight: 500;
+        margin-bottom: 80px;
     }
 }
 
@@ -213,8 +277,9 @@ h2{
 }
 
 .speaker img {
-    width: 100px;
+    width: 150px;
     border-radius: 50%;
+    border: 4px solid var(--1);
 }
 
 .speaker h3 {
@@ -227,10 +292,18 @@ h2{
     margin-top: 5px;
 }
 
+/* Album section    */
+.album-sec{
+ text-align: center;
+}
+.album-sec h2{
+    font-size: 70px;
+    margin-bottom: 10px;
+}
 .carousel-container {
     position: relative;
     width: 100%;
-    height: 600px;
+    height: 790px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -250,8 +323,8 @@ h2{
     position: absolute;
     top: 50%;
 
-    width: 150px;
-    height: 250px;
+    width: 400px;
+    height: 300px;
     transform-origin: center;
     border-radius: 25px;
     overflow: hidden;
@@ -266,12 +339,13 @@ h2{
 }
 
 button {
-    background-color: #000;
+    background-color: white;
     border: none;
-    color: #fff;
+    color: var(--1);
     font-size: 24px;
     padding: 10px;
     cursor: pointer;
+    border-radius: 15px;
 }
 
 button:hover {
@@ -301,15 +375,17 @@ button:focus {
     opacity: 1;
 }
 .view-images-button {
+    font-family: var(--txt-ff);
     position: absolute;
     top: 10%;
     left: 50%;
     transform: translateX(-50%); /* Center the button horizontally */
     z-index: 10; /* Set a high z-index to bring the button to the front */
-    background-color: transparent;
+    background-color: white;
     border-radius: 30px;
-    border: white solid;
-    color: white;
+    border: var(--1) solid;
+    color: var(--1);
     padding: 10px 20px;
     cursor: pointer;
 }
+
