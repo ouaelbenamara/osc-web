@@ -25,6 +25,23 @@ body {
    
 }
 
+@media (max-width: 1000px) {
+   body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1b1b1b; 
+    color: white; 
+
+
+    max-width: 100vw;
+    
+
+    background-image: url('../assets/illustrations/AI101/Rectangle.svg'); 
+    background-size: cover; 
+    
+   
+}
+
+}
 
 
 .berkshire-swash-regular {
@@ -334,6 +351,7 @@ gap: 2vw;
      
 
 
+
 }
 
 
@@ -359,6 +377,31 @@ gap: 2vw;
     
 
 
+}
+@media (max-width:1000px) {
+    .PrevText{
+
+
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    gap: 7vh;
+    margin-left: 0vw;
+    width: 20%;
+   /*  margin-right: 10vw; */
+    min-width: 200px;
+    z-index: 5;
+    min-height: 400px;
+    background-color: transparent;
+  /*   border-radius: 10px; */
+
+
+    
+
+
+}
+    
 }
 
 .ButtonAr img {

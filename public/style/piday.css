@@ -21,7 +21,6 @@ html{
 /* body {
     margin: 0;
     font-family: var(--txt-ff);
-    background: url('../assets/illustrations/AI101/PidayBG.webp') no-repeat center center fixed;
     background-size: cover;
     color: var(--1)
 } */
@@ -39,7 +38,7 @@ body::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('../assets/illustrations/AI101/PidayBG.webp') no-repeat center center fixed;
+    background: url('../assets/illustrations/piday/PidayBG.webp') no-repeat center center fixed;
     background-size: cover;
     opacity: 0.3; /* Set the background image opacity */
     z-index: -1; /* Make sure the background stays behind the content */
