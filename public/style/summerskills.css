@@ -1,0 +1,335 @@
+/* General Styles */
+@font-face{
+    font-family: 'Inter';
+    src: url("../assets/fonts/Inter/static/Inter_18pt-Regular.ttf");
+}
+
+:root{
+    --1: #050505;
+    --2: #b7b2aad9;
+
+    --txt-ff: 'Inter', Arial, Helvetica, sans-serif;
+
+    --ttls-fs: 3rem;
+    --sbttls-fs: 1.5rem;
+    --txt-fs: 1rem;
+}
+html{
+    width: fit-content;
+
+}
+body {
+    margin: 0;
+    font-family: var(--txt-ff);
+    background: url('../assets/images/SummerSkills/background.png') no-repeat center center fixed;
+    background-size: cover;
+    
+    color: white;
+    
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 50px;
+ ;
+}
+
+/* Top Section */
+.top-section {
+    text-align: start;
+    justify-content: flex-end;
+    display: flex;
+    flex-direction: row;
+    div{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: end;
+          .event-des{
+         margin-left: 40px;
+        font-size: 32px;
+        font-weight: 400;
+     
+      }
+
+    }
+    h1{
+        
+        color:  #7c3803;
+    }
+}
+/* Media query for small screens */
+@media (max-width: 1268px) { /* You can adjust the size (768px) based on when you want the flex to change */
+    .top-section {
+        flex-direction: column;
+        justify-content: center; /* Centered in column layout */
+        align-items: center; /* Aligns items in the center when column layout is active */
+
+        div {
+            align-items: center; /* Align the content inside the div to center */
+            text-align: center; /* Center the text */
+        .event-des{
+         margin-left: 10px;
+        font-size: 22px;
+        font-weight: 00;
+        
+    }
+        }
+         h1 {
+    font-size: 46px;
+    margin-bottom: 10px;
+}
+    }
+   
+.robot-image {
+
+    width: 200px;
+    height: 600px;
+}
+.schedule-section {
+    margin-top: 10px;
+
+    justify-content: space-around;
+    display: flex;
+    flex-direction: column;
+
+    div{
+      
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        h2{
+                font-size: 70px;
+                font-weight: 500 px;
+
+        }
+        img{
+            width: 300px;
+            height: 300px;
+        }
+    }
+}
+
+}
+
+h1 {
+    font-size: 96px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.robot-image {
+
+    width: 500px;
+    height: 600px;
+}
+
+/* Event Schedule Section */
+.schedule-section {
+    margin-top: 10px;
+
+    justify-content: space-around;
+    display: flex;
+
+    div{
+      
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        h2{
+                font-size: 70px;
+                font-weight: 500;
+
+        }
+        img{
+            width: 300px;
+            height: 300px;
+        }
+    }
+}
+
+.schedule h2 {
+    font-size: 70px;
+    margin-bottom: 20px;
+
+}
+
+.schedule ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.schedule ul li {
+    font-size: 18px;
+    width: fit-content;
+    line-height: 1.5;
+    span{
+        display: flex;
+        width: 120%;
+        
+
+div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+
+        .point{
+            background-color: #ff7700;
+            border-radius: 100%;
+            width: 10px;
+            height: 10px;
+    }
+        .stick{
+         border-radius: 30px;
+            background-color: white;
+            width: 4px;
+            height: 100px;
+    }
+    
+
+
+}
+    }
+  
+}
+
+.schedule-icon {
+    width: 500px;
+    margin-top: 20px;
+}
+h2{
+    margin-top: 0 !important;
+}
+/* Speakers Section */
+.speakers-section {
+    margin-top: 50px;
+    text-align: center;
+    h2{
+        font-size: 70px;
+        font-weight: 500;
+        color: #7c3803;
+    }
+}
+
+.speakers {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.speaker {
+    text-align: center;
+}
+
+.speaker img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.speaker h3 {
+    margin-top: 10px;
+    font-size: 22px;
+}
+
+.speaker p {
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.carousel-item {
+    position: absolute;
+    top: 50%;
+
+    width: 410px;
+    height: 220px;
+    transform-origin: center;
+    border-radius: 25px;
+    overflow: hidden;
+    opacity: 0;
+    transition: transform 0.5s ease-in-out, z-index 0.5s, opacity 0.5s;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+button {
+    background-color: #000;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #444;
+}
+
+button:focus {
+    outline: none;
+}
+
+.prev-button, .next-button {
+    display: none;
+    position: absolute;
+}
+
+.prev-button {
+    left: 20px;
+}
+
+.next-button {
+    right: 20px;
+}
+
+/* Initially stack all images but keep rotation and opacity */
+.carousel-item.initial {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 1;
+}
+.view-images-button {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%); /* Center the button horizontally */
+    z-index: 10; /* Set a high z-index to bring the button to the front */
+    background-color: transparent;
+    border-radius: 30px;
+    border:  #7c3803 solid;
+    color: #7c3803;
+    padding: 10px 20px;
+    cursor: pointer;
+}
