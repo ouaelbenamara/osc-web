@@ -57,7 +57,7 @@ body {
     }
     h1{
         
-        color: #e58e41;
+        color:  #7c3803;
     }
 }
 /* Media query for small screens */
@@ -217,6 +217,7 @@ h2{
     h2{
         font-size: 70px;
         font-weight: 500;
+        color: #7c3803;
     }
 }
 
@@ -327,8 +328,8 @@ button:focus {
     z-index: 10; /* Set a high z-index to bring the button to the front */
     background-color: transparent;
     border-radius: 30px;
-    border: white solid;
-    color: white;
+    border:  #7c3803 solid;
+    color: #7c3803;
     padding: 10px 20px;
     cursor: pointer;
 }
